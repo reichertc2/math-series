@@ -1,9 +1,13 @@
 def fibonacci_one(n):
     new_list = [0, ]
-    for x in range(0, n+1):
-        sum = new_list[x] + new_list[x-1]
-        new_list.append(sum)
-    length = len(new_list)
-    return length
+    for item in range(0, n):
+        new_list.append(1)
+        new_list.append(new_list[item]+new_list[item+1])
 
-fibonacci_one(2)
+        # if n == 1:
+        #     return 1
+        # return fibonacci_one(n-1) + n
+    return new_list
+
+
+fibonacci_one(3)
